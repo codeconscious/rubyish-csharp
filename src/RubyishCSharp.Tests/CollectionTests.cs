@@ -27,8 +27,8 @@ public static class CollectionsTests
         [Fact]
         public void Empty_NullCollection_ThrowsError()
         {
-            List<int>? input = null;
-            Assert.Throws<ArgumentNullException>(() => input!.Empty());
+            List<int>? nullList = null;
+            Assert.Throws<ArgumentNullException>(() => nullList!.Empty());
         }
     }
 
@@ -39,8 +39,8 @@ public static class CollectionsTests
         {
             var input = Enumerable.Range(short.MinValue, short.MaxValue * 2)
                                   .Select(i => (short)i);
-            var expected = Enumerable.Range(short.MinValue, short.MaxValue + 1) // Only negative
-                                     .Select(i => (short)i);
+            var expected = Enumerable.Range(short.MinValue, short.MaxValue + 1)
+                                     .Select(i => (short)i); // Only negative numbers.
             var actual = input.Reject(i => i >= 0);
             Assert.Equal(expected, actual);
         }

@@ -4,6 +4,12 @@ namespace RubyishCSharp.Library;
 
 public static class Collections
 {
+    /// <summary>
+    /// Indicates whether the collection contains any items or is empty.
+    /// </summary>
+    /// <param name="collection"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns>True if is the collection has no items; otherwise, false.</returns>
     public static bool Empty<T>(this IEnumerable<T> collection)
     {
         return !collection.Any();
