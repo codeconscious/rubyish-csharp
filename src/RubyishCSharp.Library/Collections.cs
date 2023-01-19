@@ -4,6 +4,11 @@ namespace RubyishCSharp.Library;
 
 public static class Collections
 {
+    public static bool Empty<T>(this IEnumerable<T> collection)
+    {
+        return !collection.Any();
+    }
+
     /// <summary>
     /// Returns a new collection from which items matching a given predicate
     /// have been removed.

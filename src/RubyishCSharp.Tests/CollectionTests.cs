@@ -4,6 +4,34 @@ namespace RubyishCSharp.Tests;
 
 public static class CollectionsTests
 {
+    public class EmptyTests
+    {
+        [Fact]
+        public void Empty_EmptyCollection_ReturnsTrue()
+        {
+            var input = Enumerable.Empty<int>();
+            const bool expected = true;
+            var actual = input.Empty();
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Empty_PopulatedCollection_ReturnsFalse()
+        {
+            var input = Enumerable.Range(0, 1);
+            const bool expected = false;
+            var actual = input.Empty();
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Empty_NullCollection_ThrowsError()
+        {
+            List<int>? input = null;
+            Assert.Throws<ArgumentNullException>(() => input!.Empty());
+        }
+    }
+
     public class RejectTests
     {
         [Fact]
