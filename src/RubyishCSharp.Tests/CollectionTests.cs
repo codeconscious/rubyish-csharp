@@ -1,135 +1,134 @@
-﻿using System;
-using RubyishCSharp.Library;
+﻿using RubyishCSharp.Library;
 
 namespace RubyishCSharp.Tests;
 
 public static class CollectionsTests
 {
-    public class EmptyTests
+    public class IsEmptyTests
     {
         [Fact]
-        public void Empty_EmptyEnumerable_ReturnsTrue()
+        public void IsEmpty_EmptyEnumerable_ReturnsTrue()
         {
             var input = Enumerable.Empty<int>();
             const bool expected = true;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_PopulatedEnumerable_ReturnsFalse()
+        public void IsEmpty_PopulatedEnumerable_ReturnsFalse()
         {
             var input = Enumerable.Range(0, 1);
             const bool expected = false;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_NullEnumerable_ThrowsError()
+        public void IsEmpty_NullEnumerable_ThrowsError()
         {
             IEnumerable<int>? nullEnumerable = null;
-            Assert.Throws<ArgumentNullException>(() => nullEnumerable!.Empty());
+            Assert.Throws<ArgumentNullException>(() => nullEnumerable!.IsEmpty());
         }
 
         [Fact]
-        public void Empty_EmptyList_ReturnsTrue()
+        public void IsEmpty_EmptyList_ReturnsTrue()
         {
             var input = new List<uint>();
             const bool expected = true;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_PopulatedList_ReturnsFalse()
+        public void IsEmpty_PopulatedList_ReturnsFalse()
         {
             var input = new List<uint>() { uint.MinValue, uint.MaxValue};
             const bool expected = false;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_NullList_ThrowsError()
+        public void IsEmpty_NullList_ThrowsError()
         {
             List<int>? nullList = null;
-            Assert.Throws<NullReferenceException>(() => nullList!.Empty());
+            Assert.Throws<NullReferenceException>(() => nullList!.IsEmpty());
         }
 
         [Fact]
-        public void Empty_EmptyArray_ReturnsTrue()
+        public void IsEmpty_EmptyArray_ReturnsTrue()
         {
             var input = Array.Empty<string>();
             const bool expected = true;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_PopulatedArray_ReturnsFalse()
+        public void IsEmpty_PopulatedArray_ReturnsFalse()
         {
             var input = new string[] { "aa", "bb", "cc" };
             const bool expected = false;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_NullArray_ThrowsError()
+        public void IsEmpty_NullArray_ThrowsError()
         {
             int[]? nullArray = null;
-            Assert.Throws<NullReferenceException>(() => nullArray!.Empty());
+            Assert.Throws<NullReferenceException>(() => nullArray!.IsEmpty());
         }
 
         [Fact]
-        public void Empty_EmptyStack_ReturnsTrue()
+        public void IsEmpty_EmptyStack_ReturnsTrue()
         {
             var input = new Stack<short>();
             const bool expected = true;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_PopulatedStack_ReturnsFalse()
+        public void IsEmpty_PopulatedStack_ReturnsFalse()
         {
             var input = new Stack<short>(new[] { short.MinValue, short.MaxValue });
             const bool expected = false;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_NullStack_ThrowsError()
+        public void IsEmpty_NullStack_ThrowsError()
         {
             Stack<short>? nullStack = null;
-            Assert.Throws<ArgumentNullException> (() => nullStack!.Empty());
+            Assert.Throws<ArgumentNullException> (() => nullStack!.IsEmpty());
         }
 
         [Fact]
-        public void Empty_EmptyQueue_ReturnsTrue()
+        public void IsEmpty_EmptyQueue_ReturnsTrue()
         {
             var input = new Queue<short>();
             const bool expected = true;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_PopulatedQueue_ReturnsFalse()
+        public void IsEmpty_PopulatedQueue_ReturnsFalse()
         {
             var input = new Queue<short>(new[] { short.MinValue, short.MaxValue });
             const bool expected = false;
-            var actual = input.Empty();
+            var actual = input.IsEmpty();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Empty_NullQueue_ThrowsError()
+        public void IsEmpty_NullQueue_ThrowsError()
         {
             Queue<short>? nullQueue = null;
-            Assert.Throws<ArgumentNullException>(() => nullQueue!.Empty());
+            Assert.Throws<ArgumentNullException>(() => nullQueue!.IsEmpty());
         }
     }
 
