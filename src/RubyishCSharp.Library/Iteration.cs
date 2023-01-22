@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RubyishCSharp.Library;
+﻿namespace RubyishCSharp.Library;
 
 public static class Iterations
 {
@@ -9,7 +7,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this nint count, Action action)
     {
         if (count < 1)
@@ -49,7 +47,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this nuint count, Action action)
     {
         if (count == 0)
@@ -89,7 +87,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this int count, Action action)
     {
         if (count < 1)
@@ -129,13 +127,13 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     /// /// <summary>
     /// Run an action a specified number of times.
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this uint count, Action action)
     {
         if (count == 0)
@@ -175,7 +173,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this short count, Action action)
     {
         if (count < 1)
@@ -215,7 +213,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this ushort count, Action action)
     {
         if (count == 0)
@@ -255,7 +253,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this byte count, Action action)
     {
         if (count == 0)
@@ -295,7 +293,7 @@ public static class Iterations
     /// </summary>
     /// <param name="count">The number of times to run the action.</param>
     /// <param name="action">The action to be executed.</param>
-    /// <remarks>Example usage: 10.Times(</remarks>
+    /// <remarks>Example usage: 10.Times(() => Console.WriteLine())</remarks>
     public static void Times(this sbyte count, Action action)
     {
         if (count < 1)

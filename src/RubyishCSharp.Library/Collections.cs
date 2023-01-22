@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RubyishCSharp.Library;
+﻿namespace RubyishCSharp.Library;
 
 public static class Collections
 {
