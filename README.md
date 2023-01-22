@@ -4,6 +4,16 @@ After getting some experience working with Ruby, I wondered what it would be lik
 
 This is a C# 11 (.NET 7) library. I just started working on it recently, and it's still under basic development, but feel free to use it if you wish. I welcome any feedback, PRs, or discussion.
 
+Examples:
+```
+10.Times(() => Console.WriteLine();
+10.Times(i => Console.WriteLine(i);
+
+Enumerable.Range(1, 100).Reject(i => i < 50); // The opposite of .Where
+
+Enumerable.Range(1, 100).IsEmpty(); // false
+```
+
 -----
 
 この頃、Rubyを初めて使っていて、ふと思いました。「もしRubyのもっとも便利なメソッドがC#にも存在していたら」と。そういうちょっとしたわけで、開発して作ってみました。きっと他のどなたかが以前にやったことだろうとは思いますが、今回は僕が挑戦してみたかったのです。
